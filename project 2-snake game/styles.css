@@ -15,6 +15,9 @@ html,body{
     --bg-1st: #131313;
     --bg-2st: #e7e4e4;
 
+    /* fill color */
+    --bg-fill-primary:#eae3e3c7;
+
     /* text color */
     --text-1st:#ededed;
     --text-2st:rgb(6, 6, 6);
@@ -84,10 +87,14 @@ main{
     overflow: hidden;
     display: grid;
     /* flex-wrap: wrap; */
-    grid-template-columns: repeat(auto-fill,minmax(30px,1fr));
-    grid-template-rows: repeat(auto-fill,minmax(30px,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(50px,1fr));
+    grid-template-rows: repeat(auto-fill,minmax(50px,1fr));
 }
 
 .block{
-    border: solid 1px var(--border-secondary-color);
+    border: solid 2px var(--border-secondary-color);
+}
+
+.fill{
+    background-color: var(--bg-fill-primary);
 }
