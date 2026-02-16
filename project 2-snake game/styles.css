@@ -37,6 +37,10 @@ html,body{
     --border-radius-md: 8px;
     --border-radius-lg: 12px;
 
+    /* border color */
+    --border-primary-color: rgba(213, 209, 209, 0.788);
+    --border-secondary-color: #ebeaea51;
+
     /* font size */
     --font-size-sm: 16px;
     --font-size-md: 20px;
@@ -61,6 +65,7 @@ main{
     width: 95%;
     display: flex;
     flex-direction: column;
+    margin-bottom: var(--space-md);
 }
 
 .infos{
@@ -73,17 +78,16 @@ main{
 }
 
 .board{
-    border: solid var(--border-space-sm) rgb(213, 209, 209);
+    border: solid var(--border-space-sm) var(--border-primary-color);
     flex-grow: 1;
     border-radius: var(--border-radius-md);
     overflow: hidden;
     display: grid;
-    grid-template-columns: repeat(autofill,30px);
-    grid-template-rows: repeat(autofill,30px);
+    /* flex-wrap: wrap; */
+    grid-template-columns: repeat(auto-fill,minmax(30px,1fr));
+    grid-template-rows: repeat(auto-fill,minmax(30px,1fr));
 }
 
 .block{
-    height: 30px;
-    width: 30px;
-    border: solid 1px #ebeaea73;
+    border: solid 1px var(--border-secondary-color);
 }
