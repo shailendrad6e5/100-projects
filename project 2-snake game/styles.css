@@ -2,7 +2,7 @@
     margin: 0;
     padding:0;
     box-sizing: border-box;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: sans-serif;
 }
 
 html,body{
@@ -12,8 +12,9 @@ html,body{
 
 :root{
     /* background color */
-    --bg-1st: #131313;
+    --bg-1st: #161616;
     --bg-2st: #e7e4e4;
+    --bg-3rd: #101010;
     --bg-food-color:rgba(237, 37, 37, 0.842);
 
     /* fill color */
@@ -42,7 +43,7 @@ html,body{
     --border-radius-lg: 12px;
 
     /* border color */
-    --border-primary-color: rgba(213, 209, 209, 0.788);
+    --border-primary-color: rgba(233, 226, 226, 0.958);
     --border-secondary-color: #ebeaea51;
 
     /* font size */
@@ -77,7 +78,10 @@ main{
     justify-content: space-between;
 
     .info{
-        padding: var(--space-md);
+        padding: var(--space-md) var(--space-lg);
+        background-color: var(--bg-3rd);
+        border-radius: var(--space-sm);
+        margin-top: var(--space-md);
     }
 }
 
@@ -87,13 +91,14 @@ main{
     border-radius: var(--border-radius-md);
     overflow: hidden;
     display: grid;
-    /* flex-wrap: wrap; */
+    margin: var(--space-sm);
     grid-template-columns: repeat(auto-fill,minmax(50px,1fr));
     grid-template-rows: repeat(auto-fill,minmax(50px,1fr));
 }
 
 .block{
     border: solid 2px var(--border-secondary-color);
+    border-radius: 50%;
 }
 
 .fill{
@@ -102,4 +107,42 @@ main{
 
 .food{
     background-color: var(--bg-food-color);
+}
+
+.model{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4948484c;
+    backdrop-filter: blur(4px);
+}
+
+.model .st-game,.model .restart-game{
+    color: #f5f0f0;   
+    font-size: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-lg);
+}
+
+.btn{
+    padding: var(--space-md) var(--space-xxl);
+    border: none;
+    border-radius: var(--border-radius-md);
+    transition: all 0.4s ease;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: rgb(19, 19, 19);
+    color: #fff;
+    scale: 1.09;
+}
+
+.model .restart-game{
+    display: none;
 }
