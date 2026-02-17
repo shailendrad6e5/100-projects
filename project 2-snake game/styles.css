@@ -14,6 +14,7 @@ html,body{
     /* background color */
     --bg-1st: #131313;
     --bg-2st: #e7e4e4;
+    --bg-food-color:rgba(237, 37, 37, 0.842);
 
     /* fill color */
     --bg-fill-primary:#eae3e3c7;
@@ -97,4 +98,8 @@ main{
 
 .fill{
     background-color: var(--bg-fill-primary);
+}
+
+.food{
+    background-color: var(--bg-food-color);
 }
